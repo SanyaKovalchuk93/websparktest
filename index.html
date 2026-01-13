@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Monblan Project">
+    <title>Monblan Project</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="air-datepicker/air-datepicker.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header__inner">
+            <div class="container">
+                <img loading="lazy" src="images/bg-element-left.webp" alt="background element left" class="header__bg-left" >
+                <div class="header__content">
+
+                    <div class="header__logo">
+                        <img loading="lazy" src="images/monblanproject-logo.svg" alt="Monblan Project Logo">
+                    </div>
+
+                    <div class="header__info">
+                        <div class="header__title">
+                            <span class="header__title-text">monblanproject</span>
+                            <div class="header__start-date">Start on 17-02-2016</div>
+                        </div>  
+
+                        <div class="header__stats">
+                            <div class="stat stat--posts">
+                                <span class="stat__value">870</span>
+                                <span class="stat__label">posts</span>
+                            </div>
+                            <div class="stat stat--followers">
+                                <span class="stat__value">11,787</span>
+                                <span class="stat__label">followers</span>
+                            </div>
+                            <div class="stat stat--following">
+                                <span class="stat__value">112</span>
+                                <span class="stat__label">following</span>
+                            </div>
+                        </div>
+
+                        <div class="date-filters">
+                            <span class="date-filters__label">Date</span>
+                            <div class="date-filters__input">
+                                <input type="text" id="my-datepicker-1" placeholder="from" class="date-filters__field">
+                                <button class="date-filters__calendar-btn" id="calendarIcon-1" aria-label="Open calendar (from date)"></button>
+                            </div>
+                            <div class="date-filters__input">
+                                <input type="text" id="my-datepicker-2" placeholder="to" class="date-filters__field">
+                                <button class="date-filters__calendar-btn" id="calendarIcon-2" aria-label="Open calendar (to date)"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="section">
+            <div class="container">
+                <div class="post-content">
+                    <div class="btn-switch">
+                        <button class="btn-switch__btn btn-switch__btn--tiles btn-switch__btn--active">
+                            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="6" height="6" fill="#3D8EDA"/>
+                                <rect x="8" width="6" height="6" fill="#3D8EDA"/>
+                                <rect x="16" width="6" height="6" fill="#3D8EDA"/>
+                                <rect y="8" width="6" height="6" fill="#3D8EDA"/>
+                                <rect y="16" width="6" height="6" fill="#3D8EDA"/>
+                                <rect x="8" y="8" width="6" height="6" fill="#3D8EDA"/>
+                                <rect x="8" y="16" width="6" height="6" fill="#3D8EDA"/>
+                                <rect x="16" y="8" width="6" height="6" fill="#3D8EDA"/>
+                                <rect x="16" y="16" width="6" height="6" fill="#3D8EDA"/>
+                            </svg>
+                        </button>
+                        <button class="btn-switch__btn btn-switch__btn--rows">
+                            <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect width="6" height="6" fill="#C8C7C7"/>
+                                <rect y="8" width="6" height="6" fill="#C8C7C7"/>
+                                <rect y="16" width="6" height="6" fill="#C8C7C7"/>
+                                <rect x="9" y="10" width="15" height="2" fill="#C8C7C7"/>
+                                <rect x="9" y="18" width="15" height="2" fill="#C8C7C7"/>
+                                <rect x="9" y="2" width="15" height="2" fill="#C8C7C7"/>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Tiles View -->
+                    <div class="post-list post-list--tiles">
+                        <article class="post post--tile">
+                            <img loading="lazy" src="images/post-img-tile-1.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--tile">
+                            <img loading="lazy" src="images/post-img-tile-2.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--tile">
+                            <img loading="lazy" src="images/post-img-tile-3.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--tile">
+                            <img loading="lazy" src="images/post-img-tile-1.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--tile">
+                            <img loading="lazy" src="images/post-img-tile-5.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--tile">
+                            <img loading="lazy" src="images/post-img-tile-6.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--tile">
+                            <img loading="lazy" src="images/post-img-tile-7.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--tile">
+                            <img loading="lazy" src="images/post-img-tile-8.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                       
+
+                    </div>
+
+                    <!-- Rows View -->
+                    <div class="post-list post-list--rows">
+                        <article class="post post--row">
+                            <img loading="lazy" src="images/post-img-row-1.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--row">
+                            <img loading="lazy" src="images/post-img-row-2.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--row">
+                            <img loading="lazy" src="images/post-img-row-3.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--row">
+                            <img loading="lazy" src="images/post-img-row-4.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--row">
+                            <img loading="lazy" src="images/post-img-row-5.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--row">
+                            <img loading="lazy" src="images/post-img-row-6.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--row">
+                            <img loading="lazy" src="images/post-img-row-7.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--row">
+                            <img loading="lazy" src="images/post-img-row-8.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="post post--row">
+                            <img loading="lazy" src="images/post-img-row-9.webp" alt="post img" class="post__image">
+                            <div class="post__info">
+                                <div class="post__info-left">
+                                    <span class="post__date post__date--today">Today</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">128</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">31</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-middle">
+                                    <span class="post__date post__date--published">9-08-2016</span>
+                                    <div class="post__stats">
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-heart.svg" alt="icon heart"> <span class="post__stat-value">67</span>
+                                        </div>
+                                        <div class="post__stat">
+                                            <img loading="lazy" src="images/icon-comment.svg" alt="icon comment"> <span class="post__stat-value">22</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="post__info-right">     
+                                    <span class="post__upload-type">Image upload</span>
+                                    <span class="post__upload-date">11-04-2016</span>
+                                </div>
+                            </div>
+                        </article>
+
+
+                    </div>
+
+                    <button class="btn-load">LOAD MORE</button>
+                </div>
+                <img loading="lazy" src="images/bg-element-right.webp" alt="background element right" class="section__bg-right">
+            </div>
+        </section>
+    </main>
+
+    <script src="air-datepicker/air-datepicker.js" defer></script>
+    <script type="text/javascript" src="js/script.js" defer></script>
+</body>
+</html>
